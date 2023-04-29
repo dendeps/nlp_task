@@ -17,6 +17,7 @@ pip install -r requirements.txt
 ```
 - ### Run the project locally:
 ```
+export FLASK_APP=main.py
 python -m flask run
 ```
 
