@@ -7,6 +7,7 @@ NODE_OR = Tree.fromstring("(CC )")
 
 
 def dump_trees(trees):
+    """Dump found paraphrases into the list of strings."""
     out_list = []
     for t in trees:
         out_list.append({"tree": " ".join(str(t).split())})
@@ -83,7 +84,7 @@ def paraphrase_endpoint():
 
 
 def paraphrase(data):
-    # create Tree and process
+    """create Tree and process"""
     tree = Tree.fromstring(data)
     out_trees = dump_trees(make_parmutations(tree))
     return {'paraphrase': out_trees}
